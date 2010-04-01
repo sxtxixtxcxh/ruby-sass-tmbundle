@@ -1,8 +1,5 @@
 ## Notice
 
-This project is in need of a [new maintainer](http://github.com/aussiegeek/ruby-sass-tmbundle/issues/#issue/4).
-
-
 This is a TextMate bundle for using the [Sass](http://haml.hamptoncatlin.com) CSS replacement language by Hampton Catlin
 
 
@@ -26,7 +23,7 @@ I originally wrote this bundle just as a way of getting the CSS snippets, but si
     
     mkdir -p ~/Library/Application\ Support/TextMate/Bundles
     cd ~/Library/Application\ Support/TextMate/Bundles
-    git clone git://github.com/aussiegeek/ruby-sass-tmbundle.git "Ruby Sass.tmbundle"
+    git clone git://github.com/sxtxixtxcxh/ruby-sass-tmbundle.git "Ruby Sass.tmbundle"
     osascript -e 'tell app "TextMate" to reload bundles'
 
     Without Git:
@@ -34,7 +31,7 @@ I originally wrote this bundle just as a way of getting the CSS snippets, but si
     mkdir -p ~/Library/Application\ Support/TextMate/Bundles
     cd ~/Library/Application\ Support/TextMate/Bundles
     wget http://github.com/aussiegeek/ruby-sass-tmbundle/tarball/master
-    tar zxf aussiegeek-ruby-sass-tmbundle*.tar.gz
-    rm aussiegeek-ruby-sass-tmbundle*.tar.gz
-    mv aussiegeek-ruby-sass-tmbundle* "Ruby on Rails.tmbundle"
+    tar zxf sxtxixtxcxh-ruby-sass-tmbundle*.tar.gz
+    rm sxtxixtxcxh-ruby-sass-tmbundle*.tar.gz
+    mv sxtxixtxcxh-ruby-sass-tmbundle* "Ruby on Rails.tmbundle"
     osascript -e 'tell app "TextMate" to reload bundles'
