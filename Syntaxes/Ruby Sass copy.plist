@@ -299,7 +299,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>(?i)(\[)\s*(-?[_a-z\\[[:^ascii:]]][_a-z0-9\-\\[[:^ascii:]]]*)(?:\s*([~|^$*]?=)\s*(?:(-?[_a-z\\[[:^ascii:]]][_a-z0-9\-\\[[:^ascii:]]]*)|((?&gt;(['"])(?:[^\\]|\\.)*?(\6)))))?\s*(\])</string>
+					<string>(?i)(\[)\s*(-?[_a-z\\[[:^ascii:]]][_a-z0-9\-\\[[:^ascii:]]]*)(?:\s*([~|^$*]?=)\s*(?:(-?[_a-z\\[[:^ascii:]]][_a-z0-9\-\\[[:^ascii:]]]*)|((?&gt;([&apos;&quot;])(?:[^\\]|\\.)*?(\6)))))?\s*(\])</string>
 					<key>name</key>
 					<string>meta.attribute-selector.css.sass</string>
 				</dict>
@@ -373,7 +373,7 @@
 					<array>
 						<dict>
 							<key>match</key>
-							<string>[^'") \t]+</string>
+							<string>[^&apos;&quot;) \t]+</string>
 							<key>name</key>
 							<string>variable.parameter.url.sass</string>
 						</dict>
@@ -389,7 +389,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>([^"'\n;]+)</string>
+					<string>([^&quot;&apos;\n;]+)</string>
 					<key>name</key>
 					<string>variable.parameter.url.sass</string>
 				</dict>
@@ -467,7 +467,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^[ \t]+(align|azimuth|background-attachment|background-color|background-image|background-position|background-repeat|background|border-bottom-color|border-bottom-style|border-bottom-width|border-bottom|border-collapse|border-color|border-left-color|border-left-style|border-left-width|border-left|border-right-color|border-right-style|border-right-width|border-right|border-spacing|border-style|border-top-color|border-top-style|border-top-width|border-top|border-width|border|bottom|caption-side|clear|clip|color|content|counter-increment|counter-reset|cue-after|cue-before|cue|cursor|decoration|direction|display|elevation|empty-cells|family|filter|float|font-family|font-size-adjust|font-size|font-stretch|font-style|font-variant|font-weight|font|height|image|indent|left|letter-spacing|line-height|list-style-image|list-style-position|list-style-type|list-style|margin-bottom|margin-left|margin-right|margin-top|marker-offset|margin|marks|max-height|max-width|min-height|min-width|-ms-filter|-moz-border-radius|-moz-border-radius-topleft|-moz-border-radius-topright|-moz-border-radius-bottomleft|-moz-border-radius-bottomright|-moz-box-shadow|-moz-opacity|opacity|orphans|outline-color|outline-style|outline-width|outline|overflow(-[xy])?|padding-bottom|padding-left|padding-right|padding-top|padding|page-break-after|page-break-before|page-break-inside|page|pause-after|pause-before|pause|pitch-range|pitch|play-during|position|quotes|repeat|richness|right|shadow|size|size-adjust|speak-header|speak-numeral|speak-punctuation|speech-rate|speak|stress|stretch|style|table-layout|text|text-align|text-decoration|text-indent|text-overflow|text-shadow|text-transform|top|transform|unicode-bidi|variant|vertical-align|visibility|voice-family|volume|-webkit-border-radius|-webkit-border-top-left-radius|-webkit-border-top-right-radius|-webkit-border-bottom-left-radius|-webkit-border-bottom-right-radius|-webkit-box-shadow|weight|white-space|widows|width|word-spacing|z-index)\b(:|=)</string>
+			<string>^[ \t]+\b(align|azimuth|background-attachment|background-color|background-image|background-position|background-repeat|background|border-bottom-color|border-bottom-style|border-bottom-width|border-bottom|border-collapse|border-color|border-left-color|border-left-style|border-left-width|border-left|border-right-color|border-right-style|border-right-width|border-right|border-spacing|border-style|border-top-color|border-top-style|border-top-width|border-top|border-width|border|bottom|caption-side|clear|clip|color|content|counter-increment|counter-reset|cue-after|cue-before|cue|cursor|decoration|direction|display|elevation|empty-cells|family|float|font-family|font-size-adjust|font-size|font-stretch|font-style|font-variant|font-weight|font|height|image|indent|left|letter-spacing|line-height|list-style-image|list-style-position|list-style-type|list-style|margin-bottom|margin-left|margin-right|margin-top|marker-offset|margin|marks|max-height|max-width|min-height|min-width|-moz-border-radius|-moz-border-radius-topleft|-moz-border-radius-topright|-moz-border-radius-bottomleft|-moz-border-radius-bottomright|-moz-box-shadow|-moz-opacity|opacity|orphans|outline-color|outline-style|outline-width|outline|overflow(-[xy])?|padding-bottom|padding-left|padding-right|padding-top|padding|page-break-after|page-break-before|page-break-inside|page|pause-after|pause-before|pause|pitch-range|pitch|play-during|position|quotes|repeat|richness|right|shadow|size|speak-header|speak-numeral|speak-punctuation|speech-rate|speak|stress|style|table-layout|text|text-align|text-decoration|text-indent|text-shadow|text-transform|top|transform|unicode-bidi|vertical-align|visibility|voice-family|volume|-webkit-border-radius|-webkit-border-top-left-radius|-webkit-border-top-right-radius|-webkit-border-bottom-left-radius|-webkit-border-bottom-right-radius|-webkit-box-shadow|weight|white-space|widows|width|word-spacing|z-index)\b(:|=)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -507,7 +507,7 @@
 		<key>comment-block</key>
 		<dict>
 			<key>begin</key>
-			<string>\s*(\/\*|\/\/)</string>
+			<string>( *)(/\*|\/\/)</string>
 			<key>captures</key>
 			<dict>
 				<key>0</key>
@@ -517,7 +517,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>\z</string>
+			<string>^\s*$</string>
 			<key>name</key>
 			<string>comment.block.sass</string>
 		</dict>
@@ -690,7 +690,7 @@
 						</dict>
 						<dict>
 							<key>match</key>
-							<string>[^'") \t]+</string>
+							<string>[^&apos;&quot;) \t]+</string>
 							<key>name</key>
 							<string>variable.parameter.misc.sass</string>
 						</dict>
@@ -707,7 +707,7 @@
 		<key>string-double</key>
 		<dict>
 			<key>begin</key>
-			<string>"</string>
+			<string>&quot;</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
@@ -717,7 +717,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>"</string>
+			<string>&quot;</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>0</key>
@@ -741,7 +741,7 @@
 		<key>string-single</key>
 		<dict>
 			<key>begin</key>
-			<string>'</string>
+			<string>&apos;</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
@@ -751,7 +751,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>'</string>
+			<string>&apos;</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>0</key>

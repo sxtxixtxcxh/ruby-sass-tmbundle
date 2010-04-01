@@ -5,16 +5,16 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>sass-convert</string>
+	<string>sass-convert --from sass2</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>keyEquivalent</key>
 	<string>~@c</string>
 	<key>name</key>
-	<string>Convert CSS to Sass</string>
+	<string>Convert Sass 2 to Sass 3</string>
 	<key>output</key>
 	<string>replaceSelectedText</string>
 	<key>uuid</key>
-	<string>9083E047-CEBE-41C9-BCF7-6E8131094888</string>
+	<string>5F2CE188-DBBA-47D2-B9D7-21E9A31BA6A8</string>
 </dict>
 </plist>
